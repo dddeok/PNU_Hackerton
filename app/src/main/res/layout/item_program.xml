@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border"
+    android:orientation="vertical"
+    android:layout_margin="8dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#de000000"
+        android:lineSpacingExtra="6sp"
+        android:text="다꿈 프로젝트"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="28dp"
+        android:id="@+id/programName"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="#8a000000"
+        android:lineSpacingExtra="8sp"
+        android:text="2018-08-03"
+        android:layout_marginLeft="13dp"
+        android:id="@+id/start"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="#8a000000"
+        android:lineSpacingExtra="8sp"
+        android:text=" ~ "
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="#8a000000"
+        android:lineSpacingExtra="8sp"
+        android:text="2018-08-04"
+        android:id="@+id/end"
+        />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></View>
+        <ImageButton
+            android:layout_width="87dp"
+            android:layout_height="31dp"
+            android:background="@drawable/enroll"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="10.1dp"
+            android:id="@+id/apply"
+            />
+    </LinearLayout>
+
+</LinearLayout>

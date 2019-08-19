@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/squareup"
+        android:scaleType="fitXY"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#de000000"
+        android:lineSpacingExtra="6sp"
+        android:text="다꿈 프로젝트"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="8dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="7.2dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#8a000000"
+            android:lineSpacingExtra="8sp"
+            android:text="2018-08-03"
+            android:layout_marginLeft="13dp"
+            android:id="@+id/start"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#8a000000"
+            android:lineSpacingExtra="8sp"
+            android:text=" ~ "
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#8a000000"
+            android:lineSpacingExtra="8sp"
+            android:text="2018-08-04"
+            android:id="@+id/end"
+            />
+    </LinearLayout>
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/star"
+        android:scaleType="fitXY"
+        android:layout_gravity="right"
+        android:layout_marginRight="12.2dp"
+        android:layout_marginBottom="-12dp"/>
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/square"
+        android:scaleType="fitXY"
+        android:layout_gravity="right"/>
+</LinearLayout>

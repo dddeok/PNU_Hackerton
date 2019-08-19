@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="92dp"
+    android:layout_height="32dp"
+    android:background="@drawable/chat_border">
+    <ImageView
+        android:layout_width="32.8dp"
+        android:layout_height="32dp"
+        android:scaleType="fitXY"
+        android:background="@drawable/userpic"
+        android:id="@+id/userPic"
+        android:layout_marginRight="10.2dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="#000000"
+        android:lineSpacingExtra="7sp"
+        android:text="한재민"
+        android:layout_gravity="center"
+        android:id="@+id/userName"
+        />
+
+</LinearLayout>
