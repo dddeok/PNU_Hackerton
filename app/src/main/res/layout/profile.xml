@@ -28,20 +28,11 @@
             <ImageButton
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:layout_marginRight="16dp"
-                android:scaleType="fitXY"
-                android:layout_gravity="center"
-                android:id="@+id/write"
-                android:background="@drawable/back"
-                />
-            <ImageButton
-                android:layout_width="12dp"
-                android:layout_height="24dp"
                 android:scaleType="fitXY"
                 android:layout_marginRight="16dp"
                 android:layout_gravity="center"
-                android:id="@+id/more"
-                android:background="@drawable/more"
+                android:id="@+id/edit"
+                android:background="@drawable/edit"
                 />
         </LinearLayout>
         <ImageView
