@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/person"
+            android:title="프로필"></item>
+        <item
+            android:id="@+id/check"
+            android:icon="@drawable/clock"
+            android:title="출석체크"/>
+        <item
+            android:id="@+id/favorite"
+            android:icon="@drawable/star"
+            android:title="관심글"/>
+        <item
+            android:id="@+id/board"
+            android:icon="@drawable/chart"
+            android:title="게시판"/>
+        <item
+            android:id="@+id/qna"
+            android:icon="@drawable/setting"
+            android:title="고객문의"/>
+    </group>
+</menu>

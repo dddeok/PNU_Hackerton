@@ -16,7 +16,7 @@ public class Register extends AppCompatActivity {
         //Spinner
         Spinner jobSpinner = (Spinner)findViewById(R.id.job);
         ArrayAdapter jobAdapter = ArrayAdapter.createFromResource
-                (this,R.array.job, android.R.layout.simple_spinner_item);
+                (this, R.array.job, android.R.layout.simple_spinner_item);
         jobAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         jobSpinner.setAdapter(jobAdapter);
     }
