@@ -46,7 +46,6 @@
             android:layout_height="33dp"
             android:hint="이메일"
             android:textSize="11sp"
-            android:letterSpacing="-0.1sp"
             android:lineSpacingExtra="6sp"
             android:id="@+id/email"
             />
@@ -60,7 +59,6 @@
                 android:layout_height="33dp"
                 android:hint="이름"
                 android:textSize="11sp"
-                android:letterSpacing="-0.1sp"
                 android:lineSpacingExtra="6sp"
                 android:id="@+id/name"/>
 
@@ -80,7 +78,6 @@
                 android:layout_width="115dp"
                 android:layout_height="33dp"
                 android:hint="비밀번호"
-                android:letterSpacing="-0.1sp"
                 android:lineSpacingExtra="6sp"
                 android:textSize="11sp"
                 android:id="@+id/password"/>
@@ -91,7 +88,6 @@
                 android:layout_gravity="end"
                 android:layout_marginLeft="10dp"
                 android:hint="비밀번호 확인"
-                android:letterSpacing="-0.1sp"
                 android:lineSpacingExtra="6sp"
                 android:textSize="11sp"
                 android:id="@+id/password2"/>
@@ -101,7 +97,6 @@
             android:layout_height="33dp"
             android:hint="연락처(-없이 입력하세요)"
             android:textSize="11sp"
-            android:letterSpacing="-0.1sp"
             android:lineSpacingExtra="6sp"
             android:id="@+id/hp"/>
         <LinearLayout
@@ -235,7 +230,6 @@
             android:textColor="#707070"
             android:textSize="9sp"
             android:lineHeight="13sp"
-            android:letterSpacing="-0.9sp"
             android:layout_gravity="center"
             />
     </LinearLayout>
