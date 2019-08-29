@@ -85,6 +85,13 @@
                 android:text="내 채팅방"
                 android:textSize="10dp"
                 android:id="@+id/btn_temp" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="게시글 등록"
+                android:textSize="10dp"
+                android:id="@+id/btn_temp2" />
+
         </LinearLayout>
     </LinearLayout>
     <View
