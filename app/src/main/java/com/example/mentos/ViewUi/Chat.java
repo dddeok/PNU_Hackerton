@@ -1,6 +1,6 @@
 package com.example.mentos.ViewUi;
 
-import android.support.v4.app.ActivityCompat;
+import androidx.core.app.ActivityCompat;
 
 public class Chat extends ActivityCompat {
 }
