@@ -6,17 +6,21 @@
             android:icon="@drawable/person"
             android:title="프로필"></item>
         <item
-            android:id="@+id/check"
-            android:icon="@drawable/clock"
-            android:title="출석체크"/>
+            android:id="@+id/chat"
+            android:icon="@drawable/mms"
+            android:title="내 채팅방"></item>
         <item
             android:id="@+id/favorite"
             android:icon="@drawable/star"
             android:title="관심글"/>
         <item
+            android:id="@+id/mentoBoard"
+            android:icon="@drawable/chart"
+            android:title="멘토링 게시판"/>
+        <item
             android:id="@+id/board"
             android:icon="@drawable/chart"
-            android:title="게시판"/>
+            android:title="재능기부 게시판"/>
         <item
             android:id="@+id/qna"
             android:icon="@drawable/setting"

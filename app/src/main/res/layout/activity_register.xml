@@ -105,8 +105,8 @@
             android:layout_marginTop="17.5dp"
             android:orientation="horizontal">
             <CheckBox
-                android:layout_width="10dp"
-                android:layout_height="10dp"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
                 android:id="@+id/check1"
                 android:button="@drawable/selector"
                 />
@@ -135,8 +135,8 @@
             android:layout_marginTop="7dp"
             android:orientation="horizontal">
             <CheckBox
-                android:layout_width="10dp"
-                android:layout_height="10dp"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
                 android:id="@+id/check2"
                 android:button="@drawable/selector"
                 />
@@ -165,8 +165,8 @@
             android:layout_marginTop="7dp"
             android:orientation="horizontal">
             <CheckBox
-                android:layout_width="10dp"
-                android:layout_height="10dp"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
                 android:id="@+id/check3"
                 android:button="@drawable/selector"
                 />
@@ -186,8 +186,8 @@
             android:layout_marginTop="7dp"
             android:orientation="horizontal">
             <CheckBox
-                android:layout_width="10dp"
-                android:layout_height="10dp"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
                 android:id="@+id/check4"
                 android:button="@drawable/selector"
                 />
