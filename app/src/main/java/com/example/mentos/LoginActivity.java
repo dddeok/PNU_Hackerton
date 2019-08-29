@@ -6,6 +6,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -18,6 +20,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
 public class LoginActivity extends AppCompatActivity {
     private static final int MY_PERMISSION_STORAGE = 1111;
 
@@ -29,6 +36,8 @@ public class LoginActivity extends AppCompatActivity {
     Button btn_login;
     Button btn_register;
 
+    FirebaseAuth auth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -39,6 +48,8 @@ public class LoginActivity extends AppCompatActivity {
         txt_password = (EditText)findViewById(R.id.password);
         btn_login = (Button)findViewById(R.id.btn_login);
         btn_register = (Button)findViewById(R.id.btn_register);
+
+        auth = FirebaseAuth.getInstance();
 
         linearLayout = (LinearLayout)findViewById(R.id.entire_view);
         linearLayout.setOnClickListener(new View.OnClickListener() {
@@ -53,9 +64,29 @@ public class LoginActivity extends AppCompatActivity {
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(intent);
-                finish();
+
+                String str_email = txt_email.getText().toString().trim();
+                String str_password = txt_password.getText().toString().trim();
+
+                if(TextUtils.isEmpty(str_email) || TextUtils.isEmpty(str_password)){
+                    Toast.makeText(LoginActivity.this, "All filed are required", Toast.LENGTH_SHORT).show();
+                } else {
+                    auth.signInWithEmailAndPassword(str_email,str_password)
+                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if(task.isSuccessful()) {
+                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                } else {
+                                    Log.e("TAG","On completed Failed : " + task.getException().getMessage());
+                                    Toast.makeText(LoginActivity.this, "Authenication Failed", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+                }
+
             }
         });
 
@@ -64,7 +95,6 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(intent);
-
             }
         });
     }
