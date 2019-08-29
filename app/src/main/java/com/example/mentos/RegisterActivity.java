@@ -1,17 +1,17 @@
-package com.example.mentos.ViewUi;
+package com.example.mentos;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-import com.example.mentos.R;
-
-public class Register extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.register);
+        setContentView(R.layout.activity_register);
+
+
 
         //Spinner
         Spinner jobSpinner = (Spinner)findViewById(R.id.job);

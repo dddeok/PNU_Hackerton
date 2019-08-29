@@ -7,8 +7,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="M  E  N  T  O  T  I  A"
-        android:textSize="40sp"
+        android:text="M E N T O T I A"
+        android:textSize="20sp"
         android:gravity="center"
         android:lineSpacingExtra="8sp"
         android:letterSpacing="0.55"
@@ -18,6 +18,7 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         >
 
         <ImageView
@@ -46,7 +47,6 @@
             android:layout_height="33dp"
             android:hint="이메일"
             android:textSize="11sp"
-            android:letterSpacing="-0.1sp"
             android:lineSpacingExtra="6sp"
             android:id="@+id/email"
             />
@@ -55,7 +55,6 @@
                 android:layout_width="240dp"
                 android:layout_height="33dp"
                 android:hint="비밀번호"
-                android:letterSpacing="-0.1sp"
                 android:lineSpacingExtra="6sp"
                 android:textSize="11sp"
                 android:id="@+id/password"/>
@@ -73,6 +72,7 @@
                 android:text="로그인"
                 android:textColor="#ffffff"
                 android:background="@drawable/button_bg"
+                android:id="@+id/btn_login"
                 />
 
             <Button
@@ -81,6 +81,7 @@
                 android:layout_marginLeft="35.5dp"
                 android:background="@drawable/button_bg"
                 android:text="회원가입"
+                android:id="@+id/btn_register"
                 android:textColor="#ffffff" />
         </LinearLayout>
         <LinearLayout

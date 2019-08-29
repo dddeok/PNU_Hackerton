@@ -1,27 +1,57 @@
-package com.example.mentos.ViewUi;
+package com.example.mentos;
 
 import android.Manifest;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.mentos.R;
-
-public class Login extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
     private static final int MY_PERMISSION_STORAGE = 1111;
+
+    EditText txt_email;
+    EditText txt_password;
+
+    Button btn_login;
+    Button btn_register;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login);
-
+        setContentView(R.layout.activity_login);
         checkPermission();
+
+        txt_email = (EditText)findViewById(R.id.email);
+        txt_password = (EditText)findViewById(R.id.password);
+        btn_login = (Button)findViewById(R.id.btn_login);
+        btn_register = (Button)findViewById(R.id.btn_register);
+
+        btn_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        btn_register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     private void checkPermission(){
@@ -53,7 +83,7 @@ public class Login extends AppCompatActivity {
             case MY_PERMISSION_STORAGE:
             for (int i = 0; i< grantResults.length; i++){
                 if(grantResults[i]<0){
-                    Toast.makeText(Login.this, "해당 권한을 활성화 하셔야 합니다.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "해당 권한을 활성화 하셔야 합니다.", Toast.LENGTH_SHORT).show();
                     return;
                 }
             }

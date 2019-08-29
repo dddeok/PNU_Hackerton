@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "597079272251",
+    "firebase_url": "https://fir-chat-61c89.firebaseio.com",
+    "project_id": "fir-chat-61c89",
+    "storage_bucket": "fir-chat-61c89.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597079272251:android:56df53406af6ad73",
+        "android_client_info": {
+          "package_name": "com.example.firebase_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "597079272251-se5l3vmh5rbq6cbmddomnv0r1h8ecmaq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATR_wuyidlp8jVQ5izrms4sjKT978I6AE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "597079272251-se5l3vmh5rbq6cbmddomnv0r1h8ecmaq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597079272251:android:86c3b4254869b4ad",
+        "android_client_info": {
+          "package_name": "com.example.firebase_chat2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "597079272251-ldg8gddn4tr8dm2r4g8iddp8nfv0t2gi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.firebase_chat2",
+            "certificate_hash": "8d29436660fa487e4bd5b74c658d04ead3cca83c"
+          }
+        },
+        {
+          "client_id": "597079272251-se5l3vmh5rbq6cbmddomnv0r1h8ecmaq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATR_wuyidlp8jVQ5izrms4sjKT978I6AE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "597079272251-se5l3vmh5rbq6cbmddomnv0r1h8ecmaq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597079272251:android:4a019b5793918fd6",
+        "android_client_info": {
+          "package_name": "com.example.mentos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "597079272251-se5l3vmh5rbq6cbmddomnv0r1h8ecmaq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATR_wuyidlp8jVQ5izrms4sjKT978I6AE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "597079272251-se5l3vmh5rbq6cbmddomnv0r1h8ecmaq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
