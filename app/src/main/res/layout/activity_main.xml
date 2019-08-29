@@ -5,8 +5,146 @@
     android:id="@+id/drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
+=======
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:weightSum="61">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"></View>
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/userpic"
+            android:scaleType="fitXY"
+            android:id="@+id/me"
+            android:layout_gravity="center"
+            />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"></View>
+        <TextView
+            android:layout_width="105dp"
+            android:layout_height="24dp"
+            android:textSize="20sp"
+            android:textColor="#3f3f3f"
+            android:lineSpacingExtra="4sp"
+            android:text="MENTOTIA"
+            android:layout_marginTop="12dp"
+            />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="48"></View>
+        <ImageButton
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:scaleType="fitXY"
+            android:background="@android:color/transparent"
+            android:src="@drawable/write"
+            android:layout_marginTop="14.5dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/write"/>
+        <ImageButton
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:scaleType="fitXY"
+            android:background="@android:color/transparent"
+            android:src="@drawable/search"
+            android:layout_marginTop="16dp"
+            android:id="@+id/search"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="104dp"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp"
+        >
+        <TextView
+            android:layout_width="55dp"
+            android:layout_height="20dp"
+            android:text="내 채팅방"
+            android:textColor="#3f3f3f"
+            android:textSize="14sp"
+            android:lineSpacingExtra="10sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="20dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="13dp">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내 채팅방"
+                android:textSize="10dp"
+                android:id="@+id/btn_temp" />
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#bcbcbc"
+        android:layout_gravity="bottom"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="192dp"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp">
+        <ImageButton
+            android:layout_width="8.8dp"
+            android:layout_height="8.8dp"
+            android:src="@drawable/close_small2"
+            android:scaleType="fitXY"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="7.7dp"
+            android:layout_gravity="right"
+            android:id="@+id/popup"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="53.7dp"
+            android:text="재능 기부를 통해\n멘티를 만나보세요!"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#8f000000"
+            android:textSize="15sp"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#bcbcbc"
+        android:layout_gravity="bottom"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="멘토링 프로그램"
+            android:layout_marginLeft="24dp"
+            android:layout_gravity="center"
+            android:textColor="#de000000"
+            android:textSize="16sp"
+            android:lineSpacingExtra="8sp"/>
+    </LinearLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/programList"></ListView>
+>>>>>>> d97a8be31b4e7438b41cb0081442c8b77d6dacd5
 
 
 

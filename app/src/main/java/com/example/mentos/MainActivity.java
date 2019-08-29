@@ -2,6 +2,7 @@ package com.example.mentos;
 
 
 import android.content.Intent;
+<<<<<<< HEAD
 import android.content.res.Configuration;
 import android.media.Image;
 import android.os.Bundle;
@@ -12,6 +13,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
+=======
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+>>>>>>> d97a8be31b4e7438b41cb0081442c8b77d6dacd5
 
 
 import androidx.annotation.NonNull;
@@ -32,14 +38,20 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
+<<<<<<< HEAD
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
     Intent intent;
 
+=======
+public class MainActivity extends AppCompatActivity {
+    Button btn_temp;
+>>>>>>> d97a8be31b4e7438b41cb0081442c8b77d6dacd5
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+<<<<<<< HEAD
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         DrawerLayout drawer = findViewById(R.id.drawer);
@@ -91,5 +103,16 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+=======
+
+        btn_temp = (Button)findViewById(R.id.btn_temp);
+        btn_temp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MyChatActivity.class);
+                startActivity(intent);
+            }
+        });
+>>>>>>> d97a8be31b4e7438b41cb0081442c8b77d6dacd5
     }
 }
