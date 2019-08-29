@@ -7,8 +7,10 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -18,6 +20,8 @@ import androidx.core.content.ContextCompat;
 
 public class LoginActivity extends AppCompatActivity {
     private static final int MY_PERMISSION_STORAGE = 1111;
+
+    LinearLayout linearLayout;
 
     EditText txt_email;
     EditText txt_password;
@@ -36,6 +40,16 @@ public class LoginActivity extends AppCompatActivity {
         btn_login = (Button)findViewById(R.id.btn_login);
         btn_register = (Button)findViewById(R.id.btn_register);
 
+        linearLayout = (LinearLayout)findViewById(R.id.entire_view);
+        linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                InputMethodManager in;
+                in = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
+                in.hideSoftInputFromWindow(txt_email.getWindowToken(), 0);
+            }
+        });
+
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,7 +64,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(intent);
-                finish();
+
             }
         });
     }
