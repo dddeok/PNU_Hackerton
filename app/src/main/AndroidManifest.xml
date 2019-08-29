@@ -19,19 +19,16 @@
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".LoginActivity" />
-<<<<<<< HEAD
-        <activity android:name=".RegisterActivity"/>
+
         <activity android:name=".ViewUi.Profile"/>
         <activity android:name=".ViewUi.Qna"/>
         <activity android:name=".ViewUi.Board"/>
         <activity android:name=".ViewUi.Favorite"/>
         <activity android:name=".ViewUi.Chat"/>
 
-=======
         <activity android:name=".RegisterActivity" />
         <activity android:name=".MyChatActivity" />
         <activity android:name=".MessageActivity" />
->>>>>>> d97a8be31b4e7438b41cb0081442c8b77d6dacd5
         <uses-library
             android:name="org.apache.legacy"
             android:required="false" />
