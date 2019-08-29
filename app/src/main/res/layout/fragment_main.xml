@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragment.MainFragment">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#bcbcbc"
+        android:layout_gravity="bottom"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="192dp"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp">
+        <ImageButton
+            android:layout_width="8.8dp"
+            android:layout_height="8.8dp"
+            android:src="@drawable/close_small2"
+            android:scaleType="fitXY"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="7.7dp"
+            android:layout_gravity="right"
+            android:id="@+id/popup"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="53.7dp"
+            android:text="재능 기부를 통해\n멘티를 만나보세요!"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#8f000000"
+            android:textSize="15sp"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#bcbcbc"
+        android:layout_gravity="bottom"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="멘토링 프로그램"
+            android:layout_marginLeft="24dp"
+            android:layout_gravity="center"
+            android:textColor="#de000000"
+            android:textSize="16sp"
+            android:lineSpacingExtra="8sp"/>
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/programList"></ListView>
+
+
+</LinearLayout>

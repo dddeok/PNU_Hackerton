@@ -59,94 +59,20 @@
             android:layout_marginTop="16dp"
             android:id="@+id/search"/>
     </LinearLayout>
-    <LinearLayout
+    <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
-        android:layout_height="104dp"
-        android:orientation="vertical"
-        android:layout_marginTop="8dp"
-        >
-        <TextView
-            android:layout_width="55dp"
-            android:layout_height="20dp"
-            android:text="내 채팅방"
-            android:textColor="#3f3f3f"
-            android:textSize="14sp"
-            android:lineSpacingExtra="10sp"
-            android:layout_marginTop="8dp"
-            android:layout_marginLeft="20dp"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="32dp"
-            android:orientation="horizontal"
-            android:layout_marginTop="13dp">
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="내 채팅방"
-                android:textSize="10dp"
-                android:id="@+id/btn_temp" />
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="게시글 등록"
-                android:textSize="10dp"
-                android:id="@+id/btn_temp2" />
+        android:layout_height="wrap_content"
+        android:id="@+id/tab_layout"
+        android:background="#fff"
+        app:tabSelectedTextColor="#000"
+        app:tabTextColor="#000"
+        app:tabIndicatorColor="#f68503"/>
 
-        </LinearLayout>
-    </LinearLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#bcbcbc"
-        android:layout_gravity="bottom"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="192dp"
-        android:orientation="vertical"
-        android:layout_marginTop="8dp">
-        <ImageButton
-            android:layout_width="8.8dp"
-            android:layout_height="8.8dp"
-            android:src="@drawable/close_small2"
-            android:scaleType="fitXY"
-            android:background="@android:color/transparent"
-            android:layout_marginRight="7.7dp"
-            android:layout_gravity="right"
-            android:id="@+id/popup"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="53.7dp"
-            android:text="재능 기부를 통해\n멘티를 만나보세요!"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:textColor="#8f000000"
-            android:textSize="15sp"/>
-    </LinearLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#bcbcbc"
-        android:layout_gravity="bottom"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="48dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="멘토링 프로그램"
-            android:layout_marginLeft="24dp"
-            android:layout_gravity="center"
-            android:textColor="#de000000"
-            android:textSize="16sp"
-            android:lineSpacingExtra="8sp"/>
-    </LinearLayout>
-    <ListView
+    <androidx.viewpager.widget.ViewPager
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/programList"></ListView>
-
+        android:id="@+id/view_pager"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
 
 </LinearLayout>
