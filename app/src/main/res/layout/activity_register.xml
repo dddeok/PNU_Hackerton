@@ -48,6 +48,7 @@
             android:textSize="11sp"
             android:lineSpacingExtra="6sp"
             android:id="@+id/email"
+            android:inputType="textEmailAddress"
             />
 
         <LinearLayout
@@ -80,6 +81,7 @@
                 android:hint="비밀번호"
                 android:lineSpacingExtra="6sp"
                 android:textSize="11sp"
+                android:inputType="textPassword"
                 android:id="@+id/password"/>
 
             <EditText
@@ -89,6 +91,7 @@
                 android:layout_marginLeft="10dp"
                 android:hint="비밀번호 확인"
                 android:lineSpacingExtra="6sp"
+                android:inputType="textPassword"
                 android:textSize="11sp"
                 android:id="@+id/password2"/>
         </LinearLayout>
