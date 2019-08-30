@@ -20,6 +20,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.HashMap;
+
 public class ContentRegisterActivity extends AppCompatActivity {
     EditText text_title, text_donation, text_start, text_end, text_contents;
     ImageButton btn_cancel, btn_write;
@@ -57,6 +59,19 @@ public class ContentRegisterActivity extends AppCompatActivity {
         email = (TextView)findViewById(R.id.email);
         uuid = (TextView)findViewById(R.id.uuid);
 
+        btn_write.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String title = text_title.getText().toString();
+                String donation = text_donation.getText().toString();
+                String start = text_start.getText().toString();
+                String end = text_end.getText().toString();
+                String contents = text_contents.getText().toString();
+
+                contentRegister(title, donation, start, end, contents, uuid.getText().toString());
+
+            }
+        });
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         reference = FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid());
         reference.addValueEventListener(new ValueEventListener() {
@@ -74,5 +89,20 @@ public class ContentRegisterActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void contentRegister(String title, String donation, String start, String end, String contents, String uuid) {
+        DatabaseReference reference =FirebaseDatabase.getInstance().getReference();
+
+        HashMap<String, String> hashMap = new HashMap<>();
+        hashMap.put("title",title);
+        hashMap.put("donation",donation);
+        hashMap.put("start",start);
+        hashMap.put("end",end);
+        hashMap.put("contents",contents);
+        hashMap.put("uuid", uuid);
+
+        reference.child("Donations").push().setValue(hashMap);
+        finish();
     }
 }
