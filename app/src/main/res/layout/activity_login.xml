@@ -39,14 +39,14 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="130dp"
         android:orientation="vertical"
         android:layout_gravity="center">
         <EditText
             android:layout_width="240dp"
-            android:layout_height="33dp"
+            android:layout_height="wrap_content"
             android:hint="이메일"
-            android:textSize="11sp"
+            android:textSize="14sp"
             android:lineSpacingExtra="6sp"
             android:id="@+id/email"
             android:inputType="textEmailAddress"
@@ -54,10 +54,10 @@
 
             <EditText
                 android:layout_width="240dp"
-                android:layout_height="33dp"
+                android:layout_height="wrap_content"
                 android:hint="비밀번호"
                 android:lineSpacingExtra="6sp"
-                android:textSize="11sp"
+                android:textSize="14sp"
                 android:id="@+id/password"
                 android:inputType="textPassword"/>
 
@@ -94,39 +94,44 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="9sp"
+                android:textSize="10sp"
                 android:textColor="#707070"
-                android:letterSpacing="-0.1"
                 android:lineSpacingExtra="4sp"
-                android:layout_marginLeft="11dp"
+                android:layout_marginLeft="5dp"
                 android:text="도움이 필요하신가요?"
                 />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="아이디 찾기"
-                android:layout_marginLeft="30dp"
                 android:textColor="#019ae8"
-                android:textSize="9sp"
+                android:textSize="11sp"
                 android:lineSpacingExtra="4sp"
-                android:letterSpacing="-0.1"
+                android:clickable="true"
+                android:id="@+id/find_id"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="|"
-                android:layout_marginLeft="7.5dp"
+                android:layout_marginLeft="7dp"
                 android:textColor="#707070"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="패스워드 찾기"
-                android:textSize="9sp"
-                android:layout_marginLeft="7.5dp"
+                android:textSize="11sp"
+                android:layout_marginLeft="7dp"
                 android:textColor="#019ae8"
                 android:lineSpacingExtra="4sp"
-                android:letterSpacing="-0.1"
+                android:layout_marginRight="5dp"
+                android:clickable="true"
+                android:id="@+id/find_password"
                 />
         </LinearLayout>
     </LinearLayout>
