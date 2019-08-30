@@ -6,16 +6,23 @@ public class Content {
     private String startDate;
     private String endDate;
     private String contents;
+    private String userid;
 
-    public Content(String title, String donation, String startDate, String endDate, String contents) {
+    public Content(String title, String donation, String startDate, String endDate, String contents, String userid) {
         this.title = title;
         this.donation = donation;
         this.startDate = startDate;
         this.endDate = endDate;
         this.contents = contents;
+        this.userid = userid;
     }
 
-    public Content() {
+    public String getUserid() {
+        return userid;
+    }
+
+    public void setUserid(String userid) {
+        this.userid = userid;
     }
 
     public String getTitle() {
