@@ -6,7 +6,7 @@
         android:allowBackup="true"
         android:icon="@drawable/icon"
         android:label="멘또띠아"
-        android:roundIcon="@drawable/icongit"
+        android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".QnaActivity"></activity>
