@@ -38,7 +38,7 @@
         <ImageView
             android:layout_width="26dp"
             android:layout_height="26dp"
-            android:src="@drawable/feedback"
+            android:src="@drawable/chat"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="30dp"
             android:layout_gravity="center_vertical"/>
