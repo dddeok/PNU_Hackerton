@@ -54,6 +54,10 @@
             android:textSize="16sp"
             android:lineSpacingExtra="8sp"/>
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#bcbcbc"/>
 
     <ListView
         android:layout_width="match_parent"
