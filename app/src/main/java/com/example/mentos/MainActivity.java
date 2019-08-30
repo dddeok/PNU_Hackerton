@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,14 +21,20 @@ import com.google.android.material.tabs.TabLayout;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    Button btn_temp;
-    Button btn_temp2;
+    ImageButton btn_write;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        btn_write = (ImageButton)findViewById(R.id.btn_write);
+        btn_write.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               Intent intent = new Intent(MainActivity.this, ContentRegisterActivity.class);
+               startActivity(intent);
+            }
+        });
         TabLayout tabLayout = (TabLayout)findViewById(R.id.tab_layout);
         ViewPager viewPager = (ViewPager)findViewById(R.id.view_pager);
 

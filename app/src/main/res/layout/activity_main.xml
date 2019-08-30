@@ -49,7 +49,7 @@
             android:src="@drawable/write"
             android:layout_marginTop="14.5dp"
             android:layout_marginRight="10dp"
-            android:id="@+id/write"/>
+            android:id="@+id/btn_write"/>
         <ImageButton
             android:layout_width="21dp"
             android:layout_height="21dp"
