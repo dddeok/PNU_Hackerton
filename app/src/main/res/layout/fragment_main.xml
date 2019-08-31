@@ -59,10 +59,8 @@
         android:layout_height="1dp"
         android:background="#bcbcbc"/>
 
-    <ListView
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/programList"></ListView>
-
-
+        android:id="@+id/recycler_view"/>
 </LinearLayout>

@@ -14,7 +14,7 @@
         android:text="다꿈 프로젝트"
         android:layout_marginLeft="13dp"
         android:layout_marginTop="28dp"
-        android:id="@+id/programName"
+        android:id="@+id/title"
         />
     <LinearLayout
         android:layout_width="match_parent"
@@ -57,7 +57,7 @@
             android:background="@drawable/enroll"
             android:layout_marginRight="15dp"
             android:layout_marginBottom="10.1dp"
-            android:id="@+id/apply"
+            android:id="@+id/btn_apply"
             />
     </LinearLayout>
 
