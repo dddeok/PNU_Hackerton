@@ -23,6 +23,7 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class MyChatActivity extends AppCompatActivity {
 
@@ -32,6 +33,7 @@ public class MyChatActivity extends AppCompatActivity {
 
     TextView txt_username;
     TextView txt_phonenumber;
+    TextView job;
     FirebaseUser fuser;
     DatabaseReference reference;
 
@@ -43,11 +45,11 @@ public class MyChatActivity extends AppCompatActivity {
 
         txt_username = (TextView)findViewById(R.id.username);
         txt_phonenumber = (TextView)findViewById(R.id.phonenumber);
-
+        job = (TextView)findViewById(R.id.job);
 
         recyclerView = (RecyclerView)findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getBaseContext()));
+        recyclerView.setLayoutManager(new LinearLayoutManager(MyChatActivity.this));
 
         userList= new ArrayList<>();
 
@@ -59,6 +61,7 @@ public class MyChatActivity extends AppCompatActivity {
                 User user = dataSnapshot.getValue(User.class);
                 txt_username.setText(user.getUsername());
                 txt_phonenumber.setText(user.getPhonenumber());
+                job.setText(user.getJob());
             }
 
             @Override
@@ -119,7 +122,8 @@ public class MyChatActivity extends AppCompatActivity {
                         }
                     }
                 }
-                userAdapter = new UserAdapter(getBaseContext(), mUsers);
+
+                userAdapter = new UserAdapter(MyChatActivity.this, mUsers);
                 recyclerView.setAdapter(userAdapter);
             }
 

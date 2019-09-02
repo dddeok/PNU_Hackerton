@@ -5,15 +5,27 @@ public class User {
     private String username;
     private String phonenumber;
     private String email;
+    private String job;
 
-    public User(String id, String username, String phonenumber, String email) {
+    public User(String id, String username, String phonenumber, String email, String job) {
         this.id = id;
         this.username = username;
         this.phonenumber = phonenumber;
         this.email = email;
+        this.job = job;
     }
 
+
     public User() {
+    }
+
+
+    public String getJob() {
+        return job;
+    }
+
+    public void setJob(String job) {
+        this.job = job;
     }
 
     public String getId() {

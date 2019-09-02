@@ -31,6 +31,8 @@ public class RegisterActivity extends AppCompatActivity {
     EditText txt_email, txt_name, txt_password, txt_passwordConfirm, txt_phoneNumber;
     Button btn_cancel, btn_register;
 
+    Spinner job;
+
     FirebaseAuth auth;
     DatabaseReference reference;
 
@@ -48,6 +50,7 @@ public class RegisterActivity extends AppCompatActivity {
         btn_cancel = (Button)findViewById(R.id.btn_cancel);
         btn_register = (Button)findViewById(R.id.btn_register);
 
+        job = (Spinner)findViewById(R.id.job);
 
         auth = FirebaseAuth.getInstance();
 
@@ -75,13 +78,14 @@ public class RegisterActivity extends AppCompatActivity {
                 String str_email = txt_email.getText().toString().trim();
                 String str_password = txt_password.getText().toString().trim();
                 String str_phoneNumber = txt_phoneNumber.getText().toString().trim();
+                String str_spinner = job.getSelectedItem().toString();
 
                 if(TextUtils.isEmpty(str_name) || TextUtils.isEmpty(str_email) || TextUtils.isEmpty(str_password) || TextUtils.isEmpty(str_phoneNumber)){
                     Toast.makeText(RegisterActivity.this, "All filed are required", Toast.LENGTH_SHORT).show();
                 } else if (TextUtils.isEmpty(str_password)!=TextUtils.isEmpty(txt_passwordConfirm.getText().toString())){
                     Toast.makeText(RegisterActivity.this, "Check your password", Toast.LENGTH_SHORT).show();
                 } else {
-                    register(str_name, str_email,str_password, str_phoneNumber);
+                    register(str_name, str_email,str_password, str_phoneNumber, str_spinner);
                 }
             }
         });
@@ -96,7 +100,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
-    private void register(final String str_name, final String str_email, String str_password, final String str_phoneNumber) {
+    private void register(final String str_name, final String str_email, String str_password, final String str_phoneNumber, final String str_job) {
 
         auth.createUserWithEmailAndPassword(str_email, str_password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -113,6 +117,7 @@ public class RegisterActivity extends AppCompatActivity {
                             hashMap.put("username", str_name);
                             hashMap.put("phonenumber", str_phoneNumber);
                             hashMap.put("email", str_email);
+                            hashMap.put("job", str_job);
 
                             reference.setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override

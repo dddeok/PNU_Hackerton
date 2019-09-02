@@ -77,7 +77,7 @@
                 android:layout_gravity="bottom"
                 android:layout_marginBottom="2dp"
                 android:layout_marginLeft="4dp"
-                android:id="@+id/info"/>
+                android:id="@+id/job"/>
         </LinearLayout>
     </LinearLayout>
     <LinearLayout

@@ -22,7 +22,7 @@ public class ProfileActivitiy extends AppCompatActivity {
     TextView username;
     TextView phonenumber;
     TextView email;
-
+    TextView job;
     ImageButton btn_back;
 
     FirebaseUser firebaseUser;
@@ -35,6 +35,7 @@ public class ProfileActivitiy extends AppCompatActivity {
         username = (TextView)findViewById(R.id.username);
         phonenumber = (TextView)findViewById(R.id.phonenumber);
         email = (TextView)findViewById(R.id.email);
+        job = (TextView)findViewById(R.id.job);
 
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         reference = FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid());
@@ -46,6 +47,7 @@ public class ProfileActivitiy extends AppCompatActivity {
                 username.setText(user.getUsername());
                 phonenumber.setText(user.getPhonenumber());
                 email.setText(user.getEmail());
+                job.setText(user.getJob());
             }
 
             @Override

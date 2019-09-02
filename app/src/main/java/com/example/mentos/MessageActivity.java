@@ -103,6 +103,8 @@ public class MessageActivity extends AppCompatActivity {
                 String msg = text_edit.getText().toString();
                 if(!msg.equals("")){
                     sendMessage(fuser.getUid(), userid, msg);
+                    text_edit.setText("");
+
                 } else {
                     Toast.makeText(MessageActivity.this, "You can't Send Message", Toast.LENGTH_SHORT).show();
                 }
