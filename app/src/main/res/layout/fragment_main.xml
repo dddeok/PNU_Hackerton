@@ -15,16 +15,17 @@
         android:layout_width="match_parent"
         android:layout_height="192dp"
         android:orientation="vertical"
-        android:layout_marginTop="8dp">
+        android:layout_marginTop="8dp"
+        android:id="@+id/popup">
         <ImageButton
-            android:layout_width="8.8dp"
-            android:layout_height="8.8dp"
-            android:src="@drawable/close_small2"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:src="@drawable/close_small"
             android:scaleType="fitXY"
             android:background="@android:color/transparent"
             android:layout_marginRight="7.7dp"
             android:layout_gravity="right"
-            android:id="@+id/popup"
+            android:id="@+id/popup_btn"
             />
         <TextView
             android:layout_width="wrap_content"

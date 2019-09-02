@@ -55,6 +55,16 @@ public class MainFragment extends Fragment {
 
         btn_apply = (ImageButton)view.findViewById(R.id.btn_apply);
 
+        //popup
+/*        ImageButton popup_btn = (ImageButton)view.findViewById(R.id.popup_btn);
+        View popup = (View)view.findViewById(R.id.popup);
+        popup_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                View.setVisibility(popup.GONE);
+            }
+        });*/
+
         return view;
     }
 
