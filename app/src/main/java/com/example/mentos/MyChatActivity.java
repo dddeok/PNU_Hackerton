@@ -79,10 +79,12 @@ public class MyChatActivity extends AppCompatActivity {
                 for(DataSnapshot snapshot : dataSnapshot.getChildren()){
                     Chat chat = snapshot.getValue(Chat.class);
                     if (chat.getSender().equals(fuser.getUid())){
-                        userList.add(chat.getReceiver());
+                        if(!userList.contains(chat.getReceiver()))
+                            userList.add(chat.getReceiver());
                     }
                     if (chat.getReceiver().equals(fuser.getUid())){
-                        userList.add(chat.getSender());
+                        if(!userList.contains(chat.getSender()))
+                            userList.add(chat.getSender());
                     }
                 }
 
@@ -107,17 +109,18 @@ public class MyChatActivity extends AppCompatActivity {
 
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()){
                     User user = snapshot.getValue(User.class);
-
                     for (String id : userList){
                         if (user.getId().equals(id)){
                             if (mUsers.size() != 0){
                                 for (User user1 : mUsers){
                                     if(!user.getId().equals(user1.getId())){
                                         mUsers.add(user);
+                                        break;
                                     }
                                 }
                             } else {
                                 mUsers.add(user);
+                                break;
                             }
                         }
                     }

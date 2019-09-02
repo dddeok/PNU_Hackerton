@@ -123,6 +123,7 @@ public class MessageActivity extends AppCompatActivity {
         hashMap.put("message", message);
 
         reference.child("Chats").push().setValue(hashMap);
+
     }
 
     private void readMessage(final String myid, final String userid) {
