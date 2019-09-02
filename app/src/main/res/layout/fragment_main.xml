@@ -58,7 +58,8 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#bcbcbc"/>
+        android:background="#bcbcbc"
+        android:layout_marginBottom="5dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"

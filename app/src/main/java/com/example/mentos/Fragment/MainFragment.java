@@ -1,16 +1,16 @@
 package com.example.mentos.Fragment;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageButton;
 
 import com.example.mentos.Adapter.DonationAdapter;
 import com.example.mentos.Model.Donation;
@@ -56,14 +56,14 @@ public class MainFragment extends Fragment {
         btn_apply = (ImageButton)view.findViewById(R.id.btn_apply);
 
         //popup
-/*        ImageButton popup_btn = (ImageButton)view.findViewById(R.id.popup_btn);
-        View popup = (View)view.findViewById(R.id.popup);
+        ImageButton popup_btn = (ImageButton)view.findViewById(R.id.popup_btn);
+        final LinearLayout popup = (LinearLayout)view.findViewById(R.id.popup);
         popup_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                View.setVisibility(popup.GONE);
+                popup.setVisibility(View.GONE);
             }
-        });*/
+        });
 
         return view;
     }

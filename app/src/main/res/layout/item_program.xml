@@ -4,7 +4,13 @@
     android:layout_height="wrap_content"
     android:background="@drawable/border"
     android:orientation="vertical"
-    android:layout_margin="8dp">
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp">
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/squareup"
+        android:scaleType="fitXY"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -13,7 +19,7 @@
         android:lineSpacingExtra="6sp"
         android:text="다꿈 프로젝트"
         android:layout_marginLeft="13dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="8dp"
         android:id="@+id/title"
         />
     <LinearLayout
@@ -56,9 +62,13 @@
             android:layout_height="31dp"
             android:background="@drawable/enroll"
             android:layout_marginRight="15dp"
-            android:layout_marginBottom="10.1dp"
             android:id="@+id/btn_apply"
             />
     </LinearLayout>
-
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/square"
+        android:scaleType="fitXY"
+        android:layout_gravity="right"/>
 </LinearLayout>
