@@ -71,6 +71,11 @@ public class MainFragment extends Fragment {
     private void readContents() {
         mDonations = new ArrayList<>();
 
+/*
+       Layout 겹치게 만들기
+       LinearLayout enroll = (LinearLayout) getLayoutInflater().inflate(R.layout.enroll,null);
+        enroll.setBackgroundColor(Color.parseColor("#99000000"));*/
+
         reference = FirebaseDatabase.getInstance().getReference("Donations");
         reference.addValueEventListener(new ValueEventListener() {
             @Override

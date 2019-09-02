@@ -3,29 +3,22 @@ package com.example.mentos;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
-import org.w3c.dom.Text;
 
 public class InformationDialog{
     private Context mContext;
 
     TextView start, end, title, donation, contents, uuid, username;
-    ImageButton btn_apply;
+    ImageButton btn_apply, btn_close;
 
     FirebaseUser fuser;
-
     public InformationDialog(Context mContext) {
         this.mContext = mContext;
     }
@@ -49,6 +42,15 @@ public class InformationDialog{
         donation .setText(str_donation);
         this.uuid = (TextView)dialog.findViewById(R.id.uuid);
         this.uuid.setText(uuid);
+
+        btn_close = (ImageButton)dialog.findViewById(R.id.btn_close);
+        btn_close.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, MainActivity.class);
+                mContext.startActivity(intent);
+            }
+        });
 
         btn_apply = (ImageButton)dialog.findViewById(R.id.btn_apply);
         btn_apply.setOnClickListener(new View.OnClickListener() {
