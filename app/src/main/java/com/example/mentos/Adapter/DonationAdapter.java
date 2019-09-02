@@ -36,12 +36,19 @@ public class DonationAdapter extends RecyclerView.Adapter<DonationAdapter.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
         Donation donation = mDonations.get(position);
 
         holder.title.setText(donation.getTitle());
         holder.start.setText(donation.getStart());
         holder.end.setText(donation.getEnd());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
     @Override
