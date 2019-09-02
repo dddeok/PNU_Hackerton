@@ -7,8 +7,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:orientation="horizontal"
-        android:weightSum="61">
+        android:orientation="horizontal">
         <ImageView
             android:layout_width="32dp"
             android:layout_height="32dp"
@@ -19,23 +18,16 @@
             android:id="@+id/me"
             android:layout_gravity="center"
             />
-        <View
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="2"></View>
         <TextView
-            android:layout_width="105dp"
-            android:layout_height="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:textSize="20sp"
             android:textColor="#3f3f3f"
             android:lineSpacingExtra="4sp"
+            android:layout_marginLeft="6dp"
             android:text="MENTOTIA"
-            android:layout_marginTop="12dp"
+            android:layout_gravity="center"
             />
-        <View
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="48"></View>
     </LinearLayout>
     <View
         android:layout_width="match_parent"
@@ -162,7 +154,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="제목"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 android:textColor="#de000000"
                 android:lineSpacingExtra="8sp"
                 android:layout_gravity="center"
@@ -172,6 +164,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:textSize="13sp"
+                android:paddingLeft="5dp"
                 android:inputType="textMultiLine|textNoSuggestions"
                 android:cursorVisible="true"
                 android:background="@drawable/border"
@@ -186,7 +180,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="기부재능"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 android:textColor="#de000000"
                 android:lineSpacingExtra="8sp"
                 android:layout_gravity="center"
@@ -196,6 +190,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:textSize="13sp"
+                android:paddingLeft="5dp"
                 android:inputType="textMultiLine|textNoSuggestions"
                 android:cursorVisible="true"
                 android:id="@+id/main_content"
@@ -210,7 +206,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="기간"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 android:textColor="#de000000"
                 android:lineSpacingExtra="8sp"
                 android:layout_gravity="center"
@@ -220,6 +216,9 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
+                android:textSize="13sp"
+                android:hint="190513"
+                android:paddingLeft="5dp"
                 android:inputType="textMultiLine|textNoSuggestions"
                 android:cursorVisible="true"
                 android:id="@+id/start_date"
@@ -227,7 +226,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 android:textColor="#de000000"
                 android:lineSpacingExtra="8sp"
                 android:text="~"
@@ -239,6 +238,9 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
+                android:textSize="13sp"
+                android:paddingLeft="5dp"
+                android:hint="190910"
                 android:inputType="textMultiLine|textNoSuggestions"
                 android:cursorVisible="true"
                 android:id="@+id/end_date"
@@ -253,7 +255,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="내용"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 android:textColor="#de000000"
                 android:lineSpacingExtra="8sp"
                 android:layout_gravity="center"
@@ -263,6 +265,10 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:textSize="14sp"
+            android:padding="10dp"
+            android:gravity="top"
+            android:hint="내용을 입력하세요"
             android:inputType="textMultiLine|textNoSuggestions"
             android:cursorVisible="true"
             android:background="@drawable/border"
