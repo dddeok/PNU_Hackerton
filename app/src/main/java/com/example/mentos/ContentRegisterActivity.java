@@ -26,7 +26,7 @@ public class ContentRegisterActivity extends AppCompatActivity {
     EditText text_title, text_donation, text_start, text_end, text_contents;
     ImageButton btn_cancel, btn_write;
 
-    TextView usename, email, uuid;
+    TextView username, email, uuid;
 
     FirebaseUser firebaseUser;
     DatabaseReference reference;
@@ -55,7 +55,7 @@ public class ContentRegisterActivity extends AppCompatActivity {
         btn_cancel = (ImageButton)findViewById(R.id.btn_write_cancle);
         btn_write = (ImageButton)findViewById(R.id.btn_write_submit);
 
-        usename = (TextView)findViewById(R.id.username);
+        username = (TextView)findViewById(R.id.username);
         email = (TextView)findViewById(R.id.email);
         uuid = (TextView)findViewById(R.id.uuid);
 
@@ -67,8 +67,8 @@ public class ContentRegisterActivity extends AppCompatActivity {
                 String start = text_start.getText().toString();
                 String end = text_end.getText().toString();
                 String contents = text_contents.getText().toString();
-
-                contentRegister(title, donation, start, end, contents, uuid.getText().toString());
+                String user = username.getText().toString();
+                contentRegister(title, donation, start, end, contents, uuid.getText().toString(), user);
 
             }
         });
@@ -78,7 +78,7 @@ public class ContentRegisterActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 User user = dataSnapshot.getValue(User.class);
-                usename.setText(user.getUsername());
+                username.setText(user.getUsername());
                 email.setText(user.getEmail());
                 uuid.setText(user.getId());
             }
@@ -91,7 +91,7 @@ public class ContentRegisterActivity extends AppCompatActivity {
 
     }
 
-    private void contentRegister(String title, String donation, String start, String end, String contents, String uuid) {
+    private void contentRegister(String title, String donation, String start, String end, String contents, String uuid, String username) {
         DatabaseReference reference =FirebaseDatabase.getInstance().getReference();
 
         HashMap<String, String> hashMap = new HashMap<>();
@@ -101,6 +101,7 @@ public class ContentRegisterActivity extends AppCompatActivity {
         hashMap.put("end",end);
         hashMap.put("contents",contents);
         hashMap.put("uuid", uuid);
+        hashMap.put("username", username);
 
         reference.child("Donations").push().setValue(hashMap);
         finish();

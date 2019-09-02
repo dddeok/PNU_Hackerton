@@ -7,14 +7,24 @@ public class Donation {
     private  String start;
     private  String title;
     private  String uuid;
+    private String username;
 
-    public Donation(String contents, String donation, String end, String start, String title, String uuid) {
+    public Donation(String contents, String donation, String end, String start, String title, String uuid, String username) {
         this.contents = contents;
         this.donation = donation;
         this.end = end;
         this.start = start;
         this.title = title;
         this.uuid = uuid;
+        this.username = username;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public Donation() {

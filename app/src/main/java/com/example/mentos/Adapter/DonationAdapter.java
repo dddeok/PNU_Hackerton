@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.mentos.InformationDialog;
+import com.example.mentos.MainActivity;
 import com.example.mentos.Model.Donation;
 import com.example.mentos.R;
 import com.google.firebase.auth.FirebaseUser;
@@ -37,7 +39,7 @@ public class DonationAdapter extends RecyclerView.Adapter<DonationAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
-        Donation donation = mDonations.get(position);
+        final Donation donation = mDonations.get(position);
 
         holder.title.setText(donation.getTitle());
         holder.start.setText(donation.getStart());
@@ -46,7 +48,16 @@ public class DonationAdapter extends RecyclerView.Adapter<DonationAdapter.ViewHo
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String str_title = donation.getTitle();
+                String str_start = donation.getStart();
+                String str_end = donation.getEnd();
+                String str_donation = donation.getDonation();
+                String str_contents = donation.getContents();
+                String str_username = donation.getUsername();
+                String uuid = donation.getUuid();
 
+                InformationDialog informationDialog = new InformationDialog(mContext);
+                informationDialog.callFunc(str_title, str_start, str_end, str_donation, str_contents, str_username, uuid);
             }
         });
     }
