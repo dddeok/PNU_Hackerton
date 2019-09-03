@@ -44,6 +44,7 @@ public class MentoringActivity extends AppCompatActivity {
         mentoring.setTitle("다문화 및 탈북학생 멘토링");
         mentoring.setStart("20190320");
         mentoring.setEnd("20200210");
+        mentoring.setUsername("부산대학교");
         mentoring.setMetoring("기초 학습 지도, 문화 체험 활동, 정서 지원");
         mentoring.setContents("멘토 1 : 멘티 1 결연, 멘티 희망 교과목 기초 및 기본 학습지도\n" +
                 "1학기 1회 단체 현장체험학습 프로그램 진행\n" +
@@ -56,6 +57,7 @@ public class MentoringActivity extends AppCompatActivity {
         mentoring.setTitle("거점중학교성사업 대학생 멘토링");
         mentoring.setStart("20190320");
         mentoring.setEnd("20190210");
+        mentoring.setUsername("부산대학교");
         mentoring.setMetoring("기초 학습 지도, 문화 체험, 캠프, 정서 지원");
         mentoring.setContents("멘토 1 : 멘토 3 결연, 1회 2~3시간 권장\n" +
                 "문화 체험 권장 활동 : 부산대학교 캠퍼스 투어, 박물관 및 미술관, 건전 공연\n" +
@@ -68,6 +70,7 @@ public class MentoringActivity extends AppCompatActivity {
         mentoring.setTitle("기장희망꿈나무 멘토링");
         mentoring.setStart("20190320");
         mentoring.setEnd("20200210");
+        mentoring.setUsername("부산대학교");
         mentoring.setMetoring("기초 학습 지도, 문화 체험, 캠프, 정서 지원");
         mentoring.setContents("멘토 1 : 멘토 3 결연, 1회 2~3시간 권장\n" +
                 "문화 체험 권장 활동 : 부산대학교 캠퍼스 투어, 박물관 및 미술관, 건전 공연\n" +
@@ -80,6 +83,7 @@ public class MentoringActivity extends AppCompatActivity {
         mentoring.setTitle("3-DAYS프로그램 멘토링");
         mentoring.setStart("20190511");
         mentoring.setEnd("20200205");
+        mentoring.setUsername("부산대학교");
         mentoring.setMetoring("교육 기부, 캠프");
         mentoring.setContents("1개의 팀 당 인솔자 1명(석사수료 이상 학위 소지자), 학부생 7명 이상으로 구성\n" +
                 "인솔자의 의무 : 계획서 마련 및 토요일 프로그램 참여\n" +
@@ -92,6 +96,7 @@ public class MentoringActivity extends AppCompatActivity {
         mentoring.setTitle("HUG TOGETHER 멘토링");
         mentoring.setStart("20190407");
         mentoring.setEnd("20191228");
+        mentoring.setUsername("부산대학교");
         mentoring.setMetoring("학습 지도");
         mentoring.setContents("멘토링 진행 시간 : 주 2회 이상. 1회 2시간 이상 활동\n" +
                 "멘토링 진행 장소 : 멘티 가정\n" +
@@ -104,6 +109,7 @@ public class MentoringActivity extends AppCompatActivity {
         mentoring.setTitle("다꿈 멘토링");
         mentoring.setStart("20190318");
         mentoring.setEnd("20200210");
+        mentoring.setUsername("부산대학교");
         mentoring.setMetoring("창의성 및 감성 확대, 이중언어 교육");
         mentoring.setContents("고교 및 대학 진학을 앞둔 중.고등학교 다문화 탈북학생의 진로 및 진학 지원을 위해\n" +
                 "부산대학교 93개 전공 중 창의성과 예술 감수성을 키우는 예.체틍 및 4차 산업 혁명 관련 등에\n" +
@@ -116,6 +122,7 @@ public class MentoringActivity extends AppCompatActivity {
         mentoring.setTitle("마음건강 멘토링");
         mentoring.setStart("20190318");
         mentoring.setEnd("20200210");
+        mentoring.setUsername("부산대학교");
         mentoring.setMetoring("학습지도, 정서지원");
         mentoring.setContents("멘토 1 : 멘티 1 결연\n" +
                 "멘티 희망 교과목 기초 및 기본 학습 지도(국어, 영어, 수학 등)\n" +

@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.mentos.MentoringDialog;
 import com.example.mentos.Model.Mentoring;
 import com.example.mentos.R;
 
@@ -34,12 +35,26 @@ public class MentoringAdapter extends RecyclerView.Adapter<MentoringAdapter.View
 
     @Override
     public void onBindViewHolder(@NonNull MentoringAdapter.ViewHolder holder, int position) {
-        Mentoring mentoring = mMentorings.get(position);
+        final Mentoring mentoring = mMentorings.get(position);
 
         holder.title.setText(mentoring.getTitle());
         holder.start.setText(mentoring.getStart());
         holder.start.setText(mentoring.getEnd());
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String str_title = mentoring.getTitle();
+                String str_start = mentoring.getStart();
+                String str_end = mentoring.getEnd();
+                String str_username = mentoring.getUsername();
+                String str_mentoring = mentoring.getMetoring();
+                String str_contents = mentoring.getContents();
+
+                MentoringDialog mentoringDialog = new MentoringDialog(mContext);
+                mentoringDialog.callFunc(str_title, str_start, str_end, str_username, str_mentoring, str_contents);
+            }
+        });
 
     }
 
