@@ -3,6 +3,7 @@ package com.example.mentos;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
@@ -22,7 +23,7 @@ public class MentoringDialog{
         this.mContext = mContext;
     }
 
-    public  void callFunc(String str_title, String str_start, String str_end,  String str_username,String str_mentoring, String str_contents){
+    public  void callFunc(String str_title, String str_start, String str_end,  String str_username,String str_mentoring, String str_contents, String uri){
         final Dialog dialog = new Dialog(mContext, android.R.style.Theme_Light);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.mentoring_enroll);
@@ -40,6 +41,8 @@ public class MentoringDialog{
         contents = (TextView)dialog.findViewById(R.id.contents);
         contents.setText(str_contents);
 
+        final String url = uri;
+
         btn_close = (ImageButton)dialog.findViewById(R.id.btn_close);
         btn_close.setOnClickListener( new View.OnClickListener() {
             @Override
@@ -50,7 +53,15 @@ public class MentoringDialog{
         });
 
         btn_apply = (ImageButton)dialog.findViewById(R.id.btn_apply);
+        btn_apply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse(url);
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                mContext.startActivity(intent);
 
+            }
+        });
         dialog.show();
     }
 }

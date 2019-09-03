@@ -17,11 +17,13 @@ import androidx.viewpager.widget.ViewPager;
 import com.example.mentos.Fragment.MainFragment;
 import com.example.mentos.Fragment.MenuFragment;
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     ImageButton btn_write;
+    ImageButton btn_logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                Intent intent = new Intent(MainActivity.this, ContentRegisterActivity.class);
                startActivity(intent);
+            }
+        });
+        btn_logout = (ImageButton)findViewById(R.id.btn_logout);
+        btn_logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                finish();
             }
         });
         TabLayout tabLayout = (TabLayout)findViewById(R.id.tab_layout);

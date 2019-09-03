@@ -7,17 +7,27 @@ public class Mentoring {
     private String username;
     private String metoring;
     private String contents;
+    private String url;
 
-    public Mentoring() {
-    }
-
-    public Mentoring(String title, String start, String end, String username, String metoring, String contents) {
+    public Mentoring(String title, String start, String end, String username, String metoring, String contents, String url) {
         this.title = title;
         this.start = start;
         this.end = end;
         this.username = username;
         this.metoring = metoring;
         this.contents = contents;
+        this.url = url;
+    }
+
+    public Mentoring() {
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public String getTitle() {

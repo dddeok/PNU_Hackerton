@@ -48,10 +48,10 @@
             android:layout_height="21dp"
             android:scaleType="fitXY"
             android:background="@android:color/transparent"
-            android:src="@drawable/search"
+            android:src="@drawable/logout_icon"
             android:layout_marginTop="16dp"
             android:layout_marginRight="18dp"
-            android:id="@+id/search"/>
+            android:id="@+id/btn_logout"/>
     </LinearLayout>
     <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"

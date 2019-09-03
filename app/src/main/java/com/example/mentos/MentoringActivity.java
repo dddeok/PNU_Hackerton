@@ -50,6 +50,7 @@ public class MentoringActivity extends AppCompatActivity {
                 "1학기 1회 단체 현장체험학습 프로그램 진행\n" +
                 "학대아동 상담 및 정서지원 활동\n" +
                 "사회적 배려 지도");
+        mentoring.setUrl("http://nanum.pusan.ac.kr/sub/Intro/mentoHistory.html?id=14");
         mMentorings.add(mentoring);
 
         //2
@@ -63,6 +64,7 @@ public class MentoringActivity extends AppCompatActivity {
                 "문화 체험 권장 활동 : 부산대학교 캠퍼스 투어, 박물관 및 미술관, 건전 공연\n" +
                 "캠프 : 의무 참여 및 불참 시 4시간 학습지도로 대체\n" +
                 "정서지원 : 청소년기 고민 상담, 진로 및 진학 지도");
+        mentoring.setUrl("http://nanum.pusan.ac.kr/sub/Intro/mentoHistory.html?id=01");
         mMentorings.add(mentoring);
 
         //3
@@ -76,6 +78,7 @@ public class MentoringActivity extends AppCompatActivity {
                 "문화 체험 권장 활동 : 부산대학교 캠퍼스 투어, 박물관 및 미술관, 건전 공연\n" +
                 "캠프 : 의무 참여 및 불참 시 4시간 학습지도로 대체\n" +
                 "정서지원 : 청소년기 고민 상담, 진로 및 진학 지도");
+        mentoring.setUrl("http://nanum.pusan.ac.kr/sub/Intro/mentoHistory.html?id=02");
         mMentorings.add(mentoring);
 
         //4
@@ -89,6 +92,7 @@ public class MentoringActivity extends AppCompatActivity {
                 "인솔자의 의무 : 계획서 마련 및 토요일 프로그램 참여\n" +
                 "팀별 지원금 : 3,000천원 ~ 5,000천원\n" +
                 "지원금 사용 : 교육재료비, 교재제작, 교통비, 식비, 숙박비");
+        mentoring.setUrl("http://nanum.pusan.ac.kr/sub/Intro/mentoHistory.html?id=05");
         mMentorings.add(mentoring);
 
         //5
@@ -102,6 +106,7 @@ public class MentoringActivity extends AppCompatActivity {
                 "멘토링 진행 장소 : 멘티 가정\n" +
                 "멘토링 진행 내용 : 멘티 희망 과목\n" +
                 "과목별 총원 20명(수학 10명, 영어 4명, 과학 3명, 국어 3명)");
+        mentoring.setUrl("http://nanum.pusan.ac.kr/sub/Intro/mentoHistory.html?id=09");
         mMentorings.add(mentoring);
 
         //6
@@ -115,6 +120,7 @@ public class MentoringActivity extends AppCompatActivity {
                 "부산대학교 93개 전공 중 창의성과 예술 감수성을 키우는 예.체틍 및 4차 산업 혁명 관련 등에\n" +
                 "관심을 관심을 둔 다문화/탈북 학생과 부모나라 언어에 관심을 가지고, 언어능력 향상에\n" +
                 "관심을 가진 다문화/탈북 학생 및 외국인 학생을 인재로 성장시키기 위한 프로그램.");
+        mentoring.setUrl("http://nanum.pusan.ac.kr/sub/Intro/mentoHistory.html?id=11");
         mMentorings.add(mentoring);
 
         //7
@@ -129,6 +135,7 @@ public class MentoringActivity extends AppCompatActivity {
                 "정신질환 아동 상담 및 정서지원 활동\n" +
                 "일상 환경 개선, 투여 약물 관리 등 생활지도\n" +
                 "교육기관 동생, 학습 및 인성지도");
+        mentoring.setUrl("http://nanum.pusan.ac.kr/sub/Intro/mentoHistory.html?id=08");
         mMentorings.add(mentoring);
 
         //8
@@ -144,6 +151,7 @@ public class MentoringActivity extends AppCompatActivity {
                 "1:1 멘토링을 기본으로 하되, 희망시 형제 및 자매 동반지도 가능\n" +
                 "학대아동 상담 및 정서지원 활동\n" +
                 "사회적 배려 지도");
+        mentoring.setUrl("http://nanum.pusan.ac.kr/sub/Intro/mentoHistory.html?id=07");
         mMentorings.add(mentoring);
 
         //9
@@ -158,6 +166,7 @@ public class MentoringActivity extends AppCompatActivity {
                 " 1. 참가신청 전 반드시 개인 경력사항 PASS 입력, 학과 인증받기\n" +
                 " 2. 직업 선호도 검사하고, 참가신청시 작성시 결과물 첨부파일로 업로드 하기\n" +
                 " 3. 멘토스쿨 이수 후, 멘토링 프로그램 별 멘토 모집 시 참고사항");
+        mentoring.setUrl("http://nanum.pusan.ac.kr/sub/notice/noticeDetail.html?id=57");
         mMentorings.add(mentoring);
 
         mentoringAdapter = new MentoringAdapter(MentoringActivity.this, mMentorings);

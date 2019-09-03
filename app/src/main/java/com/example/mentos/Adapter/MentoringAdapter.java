@@ -50,9 +50,12 @@ public class MentoringAdapter extends RecyclerView.Adapter<MentoringAdapter.View
                 String str_username = mentoring.getUsername();
                 String str_mentoring = mentoring.getMetoring();
                 String str_contents = mentoring.getContents();
+                String str_url = mentoring.getUrl();
 
                 MentoringDialog mentoringDialog = new MentoringDialog(mContext);
-                mentoringDialog.callFunc(str_title, str_start, str_end, str_username, str_mentoring, str_contents);
+                mentoringDialog.callFunc(str_title, str_start, str_end, str_username, str_mentoring, str_contents, str_url);
+
+
             }
         });
 
