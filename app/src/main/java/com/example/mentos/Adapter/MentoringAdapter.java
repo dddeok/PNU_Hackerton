@@ -39,7 +39,7 @@ public class MentoringAdapter extends RecyclerView.Adapter<MentoringAdapter.View
 
         holder.title.setText(mentoring.getTitle());
         holder.start.setText(mentoring.getStart());
-        holder.start.setText(mentoring.getEnd());
+        holder.end.setText(mentoring.getEnd());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -3,7 +3,10 @@ package com.example.mentos;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.media.Image;
 import android.net.Uri;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
@@ -14,12 +17,17 @@ public class MentoringDialog{
 
     TextView start, end, title, mentoring, contents, username;
     ImageButton btn_apply, btn_close;
+    ImageButton btn_favorite;
+
 
     public MentoringDialog(Context mContext) {
         this.mContext = mContext;
     }
 
     public  void callFunc(String str_title, String str_start, String str_end,  String str_username,String str_mentoring, String str_contents, String uri){
+        final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(mContext);
+        final SharedPreferences.Editor editor = sharedPreferences.edit();
+
         final Dialog dialog = new Dialog(mContext, android.R.style.Theme_Light);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.mentoring_enroll);
@@ -58,6 +66,26 @@ public class MentoringDialog{
 
             }
         });
+
+        btn_favorite = (ImageButton)dialog.findViewById(R.id.btn_favorite);
+        btn_favorite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(title.getText().toString().equals(sharedPreferences.getString(title.getText().toString(), ""))) {
+                    editor.remove(title.getText().toString());
+                    btn_favorite.setBackgroundResource(R.drawable.emptystar);
+                } else {
+                    editor.putString(title.getText().toString(), title.getText().toString());
+                    btn_favorite.setBackgroundResource(R.drawable.star);
+                }
+                editor.commit();
+            }
+        });
+        if(title.getText().toString().equals(sharedPreferences.getString(title.getText().toString(), ""))) {
+            btn_favorite.setBackgroundResource(R.drawable.star);
+        } else {
+            btn_favorite.setBackgroundResource(R.drawable.emptystar);
+        }
         dialog.show();
     }
 }
