@@ -9,10 +9,12 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class InformationDialog{
+public class InformationDialog extends AppCompatActivity {
     private Context mContext;
 
     TextView start, end, title, donation, contents, uuid, username;

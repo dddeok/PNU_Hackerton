@@ -8,10 +8,6 @@ import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 public class MentoringDialog{
     private Context mContext;
@@ -47,7 +43,7 @@ public class MentoringDialog{
         btn_close.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext, MainActivity.class);
+                Intent intent = new Intent(mContext, MentoringActivity.class);
                 mContext.startActivity(intent);
             }
         });
