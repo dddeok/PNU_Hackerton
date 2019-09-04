@@ -91,6 +91,7 @@ public class MessageActivity extends AppCompatActivity {
 
             }
         });
+
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

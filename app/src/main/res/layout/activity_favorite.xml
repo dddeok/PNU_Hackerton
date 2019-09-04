@@ -66,10 +66,10 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:background="@drawable/border">
-        <ListView
+        <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/favorite"></ListView>
+            android:id="@+id/recycler_view"/>
     </LinearLayout>
 
 </LinearLayout>

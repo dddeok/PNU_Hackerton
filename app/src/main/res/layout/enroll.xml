@@ -228,7 +228,7 @@
                 android:background="@drawable/emptystar"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="14dp"
-                android:id="@+id/favorite"/>
+                android:id="@+id/btn_favorite"/>
         </LinearLayout>
 
     </LinearLayout>
