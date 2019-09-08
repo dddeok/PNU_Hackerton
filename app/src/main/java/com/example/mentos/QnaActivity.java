@@ -15,8 +15,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import org.w3c.dom.Text;
+
 public class QnaActivity extends AppCompatActivity {
-    TextView username, email;
+    TextView username, email, job;
 
     FirebaseUser firebaseUser;
     DatabaseReference reference;
@@ -27,6 +29,7 @@ public class QnaActivity extends AppCompatActivity {
 
         username = (TextView)findViewById(R.id.username);
         email = (TextView)findViewById(R.id.email);
+        job = (TextView)findViewById(R.id.job);
 
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         reference = FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid());
@@ -36,6 +39,7 @@ public class QnaActivity extends AppCompatActivity {
                 User user = dataSnapshot.getValue(User.class);
                 username.setText(user.getUsername());
                 email.setText(user.getEmail());
+                job.setText(user.getJob());
             }
 
             @Override

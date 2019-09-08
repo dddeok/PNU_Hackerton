@@ -72,7 +72,7 @@
             android:lineSpacingExtra="14sp"
             android:layout_marginLeft="6dp"
             android:layout_gravity="center"
-            android:id="@+id/write_info"
+            android:id="@+id/job"
             />
         <View
             android:layout_width="0dp"

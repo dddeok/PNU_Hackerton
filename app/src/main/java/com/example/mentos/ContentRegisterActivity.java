@@ -27,6 +27,7 @@ public class ContentRegisterActivity extends AppCompatActivity {
     ImageButton btn_cancel, btn_write;
 
     TextView username, email, uuid;
+    TextView job;
 
     FirebaseUser firebaseUser;
     DatabaseReference reference;
@@ -58,6 +59,7 @@ public class ContentRegisterActivity extends AppCompatActivity {
         username = (TextView)findViewById(R.id.username);
         email = (TextView)findViewById(R.id.email);
         uuid = (TextView)findViewById(R.id.uuid);
+        job = (TextView)findViewById(R.id.job);
 
         btn_write.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,7 +71,6 @@ public class ContentRegisterActivity extends AppCompatActivity {
                 String contents = text_contents.getText().toString();
                 String user = username.getText().toString();
                 contentRegister(title, donation, start, end, contents, uuid.getText().toString(), user);
-
             }
         });
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
@@ -81,6 +82,7 @@ public class ContentRegisterActivity extends AppCompatActivity {
                 username.setText(user.getUsername());
                 email.setText(user.getEmail());
                 uuid.setText(user.getId());
+                job.setText(user.getJob());
             }
 
             @Override
